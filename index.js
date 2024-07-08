@@ -1,4 +1,7 @@
 import express from "express";
+import { dbconnection } from "./config/db.js";
+
+dbconnection();
 
 const app = express();
 
