@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const connectionString=process.env.mongo_uri
+const connectionString=process.env.Mongo_url
 
 export const dbconnection = async() => {
     try{
