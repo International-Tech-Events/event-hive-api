@@ -7,3 +7,4 @@ collegeRouter.get('/college', getcollege);
 collegeRouter.post('/college', postCollege);
 collegeRouter.get('/college/:id', getACollege);
 collegeRouter.patch('/college/:id', updateCollege);
+collegeRouter.delete('/college/:id', deleteCollege);
