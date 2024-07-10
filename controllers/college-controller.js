@@ -4,10 +4,10 @@ export const getCollege = async (req, res) => {
     try {
         console.log('request', req);
         const college = await collegeModel.find();
-        res.status(200).json(collegecrud);
+        res.status(200).json(college); 
     } catch (error) {
         console.log(error);
-        
+        res.status(500).json({ message: 'Internal server error' }); 
     }
 }
 
@@ -17,7 +17,8 @@ export const postCollege = async (req, res) => {
         const postcollege = await collegeModel.create(req.body)
         res.status(200).json(postcollege);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: 'Internal server error' }); 
     }
 };
 
@@ -28,7 +29,8 @@ export const getACollege = async (req, res) => {
         res.json(getcollegeId);
 
 } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: 'Internal server error' }); 
 
     }
 }
@@ -41,7 +43,8 @@ export const updateCollege = async (req,res) => {
         res.json(updatecollegId);
 
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: 'Internal server error' }); 
 
     }
 }
@@ -53,7 +56,8 @@ export const deleteCollege = async (req, res) => {
 
         const deletedcollege = await collegeModel.findByIdAndDelete(collegeId);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ message: 'Internal server error' }); 
 
     }
 }

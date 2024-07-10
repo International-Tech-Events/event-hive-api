@@ -3,7 +3,7 @@ import { getCollege, getACollege,postCollege,deleteCollege,updateCollege } from 
 
 export const collegeRouter = Router();
 
-collegeRouter.get('/college', getcollege);
+collegeRouter.get('/college', getCollege);
 collegeRouter.post('/college', postCollege);
 collegeRouter.get('/college/:id', getACollege);
 collegeRouter.patch('/college/:id', updateCollege);
